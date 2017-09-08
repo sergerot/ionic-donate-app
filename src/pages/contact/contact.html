@@ -5,13 +5,22 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+      <ion-input [(ngModel)]="address" type="text" placeholder="Neue email..."></ion-input>
+      <button (click)="addEmailAddress()" ion-button clear item-right>
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+    </ion-item>
+  </ion-list>
+<ion-list>
+    <ion-item *ngFor="let address of addresses">
+      <ion-label>{{address.address}}</ion-label>
+      <ion-checkbox (ngModelChange)="emailDataChanged()" [(ngModel)]="address.checked"></ion-checkbox>
+      <button (click)="removeEmailAddress(address)" ion-button clear item-right>
+      <ion-icon name="remove-circle"></ion-icon>
+    </button>
     </ion-item>
   </ion-list>
 </ion-content>

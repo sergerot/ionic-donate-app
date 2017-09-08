@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  reached: string = '48';
+
   constructor(public navCtrl: NavController) {
 
   }

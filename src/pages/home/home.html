@@ -1,17 +1,62 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Mail</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col> <button (click)="openCamera()" [ngClass]="{'disabled': maximalImagesReached()}" ion-button menuToggle>
+      <ion-icon name="camera"></ion-icon>
+    </button>
+      </ion-col>
+      <ion-col>{{email.images.length}}/{{imageMax}}
+        <a (click)="deleteImages()">
+          <ion-icon name="trash"></ion-icon>
+        </a>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col><button (click)="newEmail()" color="secondary" ion-button outline item-right>
+      <ion-icon name="refresh"></ion-icon>
+    </button></ion-col>
+      <ion-col>
+        <button (click)="saveEmailPrompt()" color="secondary" ion-button outline item-right>
+      <ion-icon name="copy"></ion-icon>
+    </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <hr class="style-one">
+  <ion-item>
+    <ion-label color="primary" floating>EMAIL</ion-label>
+    <ion-textarea [(ngModel)]="email.emailText" rows="10"></ion-textarea>
+    <button class="white-button" item-right ion-button icon-only (click)="presentPopover($event)">
+  <ion-icon color="primary" name="more"></ion-icon>
+</button>
+  </ion-item>
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="space"></div>
+  <ion-item>
+    <ion-input [(ngModel)]="email.vers" placeholder="Bibelvers"></ion-input>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label item-left color="primary">Ziel:</ion-label>
+          <ion-input [(ngModel)]="email.targetDonate" placeholder="..."></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col class="right">
+        <button (click)="sendEmail()" ion-button round>
+        SEND
+    </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

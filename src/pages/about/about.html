@@ -1,11 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div class="progress-outer">
+    <div class="progress-inner" [style.width]="reached + '%'">
+        {{reached}}%
+    </div>
+</div>
 </ion-content>
