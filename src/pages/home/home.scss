@@ -1,3 +1,33 @@
-page-home {
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
 
+.space {
+    margin-bottom: 30px;
+}
+
+.disabled {
+    pointer-events: none;
+    color: grey;
+}
+
+.white-button {
+	background-color: white;
+    box-shadow: none;
+    border: none;
+    transform: rotate(90deg);
+
+}
+
+.fixed-item{
+    background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.right {
+     text-align:right;
 }

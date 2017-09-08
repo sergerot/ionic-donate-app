@@ -1,26 +1,20 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This app is written based on starter template for [Ionic] ()ionic2-starter `tabs`(http://ionicframework.com/docs/) projects.
 
-## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Target:
+Diese Applikation wurde zum Sammeln von Spenden und der Verbreitung von Informationen der Beduerftigen per Email realisiert. Dabei hat der Nutzer die Moeglichkeit sowohl Fotos, als auch Text in die Spenden-Email zu integrieren. Das Managen von Email-Adressen ist ebenfalls bereits implementiert. *Die Anzeige des bereits eingenommenen Spendenbetrags ist bisher nur als Ladebalken ohne jegliche Information realisiert.* Die App kann in der bisher vorliegenden Form bereits verwendet werden!
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+### Install (ionic2 and cordova required):
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+$ npm install
 ```
 
-Then, to run it, cd into `myTabs` and run:
+### Start app:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic serve
 ```
 
-Substitute ios for android if not on a Mac.
+![Beschreibung](first-look.png)
 
